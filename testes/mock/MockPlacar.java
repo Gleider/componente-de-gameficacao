@@ -45,15 +45,7 @@ public class MockPlacar implements Placar{
 	@Override //ler artigo do "http://blog.caelum.com.br/ordenando-colecoes-com-comparable-e-comparator/" para implementar ordenação
 	public List<String> getPontosRanking(String tipo) {
 		List<String> rank = new ArrayList<String>();
-		for(Usuario user : usuarios){
-			rank.add(user.getPontos(tipo) + ";" + user.getNome());
-		}
-		Collections.sort(rank, new Comparator<String>()){
-			@Override
-			public int compare(String o1, String o2){
-				
-			}
-		}
+		
 		for(String s : rank){
 			System.out.println(s);
 		}
